@@ -3,22 +3,22 @@ import { CommandR, FocalPoint, AcmeCorp, Interlock } from "@/components/icons";
 const teamMembers = [
   {
     name: "Jennifer Walsh",
-    img: "/Assests/JenniferWalsh.png",
+    img: "/assets/JenniferWalsh.png",
     highlight: false,
   },
   {
     name: "Micheal Torres",
-    img: "/Assests/MichealTorres.png",
+    img: "/assets/MichealTorres.png",
     highlight: true,
   },
   {
     name: "Amanda Chen",
-    img: "/Assests/AmandaChen.png",
+    img: "/assets/AmandaChen.png",
     highlight: false,
   },
   {
     name: "David Patterson",
-    img: "/Assests/DavidPatterson.png",
+    img: "/assets/DavidPatterson.png",
     highlight: false,
   },
 ];
@@ -34,7 +34,8 @@ const logos = [
   {
     name: "Interlock",
     component: <Interlock />,
-    wrapperClass: "inline-flex h-[44px] flex-col items-start aspect-[149.41/44]",
+    wrapperClass:
+      "inline-flex h-[44px] flex-col items-start aspect-[149.41/44]",
     innerClass:
       "flex w-[149.41px] h-[44px] py-[0.001px] flex-col justify-center items-center shrink-0",
   },
@@ -96,7 +97,13 @@ const TrustedBy = () => {
           {/* Logos */}
           <div className="h-10 w-5xl flex justify-between">
             {logos.map(
-              ({ name, component, wrapperClass, innerClass, extraInnerClass }) => (
+              ({
+                name,
+                component,
+                wrapperClass,
+                innerClass,
+                extraInnerClass,
+              }) => (
                 <div key={name} className={wrapperClass}>
                   <div className={innerClass}>
                     {extraInnerClass ? (
@@ -106,7 +113,7 @@ const TrustedBy = () => {
                     )}
                   </div>
                 </div>
-              )
+              ),
             )}
           </div>
         </div>

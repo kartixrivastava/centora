@@ -11,10 +11,10 @@ type KpiRow = {
 };
 
 const AVATARS = [
-  { src: "/Assests/img1.png", alt: "User avatar 1" },
-  { src: "/Assests/img2.png", alt: "User avatar 2" },
-  { src: "/Assests/img3.png", alt: "User avatar 3" },
-  { src: "/Assests/img4.png", alt: "User avatar 4" },
+  { src: "/assets/img1.png", alt: "User avatar 1" },
+  { src: "/assets/img2.png", alt: "User avatar 2" },
+  { src: "/assets/img3.png", alt: "User avatar 3" },
+  { src: "/assets/img4.png", alt: "User avatar 4" },
 ] satisfies Avatar[];
 
 const KPI_ROWS = [
@@ -37,15 +37,19 @@ const RINGS = [
 ] as const;
 
 const ROUND_CARD = "rounded-[32px]";
-const PHONE_NOTCH = "absolute left-1/2 top-2 -translate-x-1/2 rounded-[16777200px] bg-[#262626]";
-const KPI_TILE = "flex items-center justify-between rounded-xl bg-[#F5F5F5] p-3";
+const PHONE_NOTCH =
+  "absolute left-1/2 top-2 -translate-x-1/2 rounded-[16777200px] bg-[#262626]";
+const KPI_TILE =
+  "flex items-center justify-between rounded-xl bg-[#F5F5F5] p-3";
 const META_TEXT = "text-[12px] leading-4 tracking-[1.2px] text-[#404040]";
 
 const Bento = () => {
   return (
     <section className="w-full bg-background px-4 pb-24 md:px-8 lg:px-10">
       <div className="mx-auto flex w-full max-w-[1024px] flex-col gap-6 xl:flex-row xl:gap-4">
-        <div className={`flex w-full flex-col overflow-hidden bg-secondary px-8 pt-8 xl:h-[658px] xl:w-2/5 ${ROUND_CARD}`}>
+        <div
+          className={`flex w-full flex-col overflow-hidden bg-secondary px-8 pt-8 xl:h-[658px] xl:w-2/5 ${ROUND_CARD}`}
+        >
           <div className="flex flex-col pb-6">
             <h2 className="text-center text-[36px] font-medium leading-[45px] text-primary">
               Guided Onboarding
@@ -112,9 +116,14 @@ const Bento = () => {
                       <Check className="h-6 w-6 opacity-25" />
                     </div>
 
-                    <div className={`mt-auto inline-flex items-center gap-2 ${META_TEXT}`}>
+                    <div
+                      className={`mt-auto inline-flex items-center gap-2 ${META_TEXT}`}
+                    >
                       {PROJECT_META.map((item, index) => (
-                        <div key={item} className="inline-flex items-center gap-2">
+                        <div
+                          key={item}
+                          className="inline-flex items-center gap-2"
+                        >
                           {index > 0 && <span>•</span>}
                           <span>{item}</span>
                         </div>
@@ -129,7 +138,9 @@ const Bento = () => {
         </div>
 
         <div className="flex w-full flex-col gap-3 xl:h-[658px] xl:w-3/5">
-          <div className={`relative min-h-[320px] overflow-hidden bg-[#E8F5C8] p-8 xl:h-[320px] ${ROUND_CARD}`}>
+          <div
+            className={`relative min-h-[320px] overflow-hidden bg-[#E8F5C8] p-8 xl:h-[320px] ${ROUND_CARD}`}
+          >
             <div className="max-w-[192px]">
               <h2 className="text-[24px] leading-[30px] font-medium text-[#171717]">
                 Real-time Data
@@ -195,7 +206,9 @@ const Bento = () => {
           </div>
 
           <div className="grid w-full gap-4 md:grid-cols-2 xl:flex-1 xl:grid-cols-2">
-            <div className={`flex min-h-[256px] flex-col items-center justify-center bg-[#E8F5C8] p-8 xl:h-full ${ROUND_CARD}`}>
+            <div
+              className={`flex min-h-[256px] flex-col items-center justify-center bg-[#E8F5C8] p-8 xl:h-full ${ROUND_CARD}`}
+            >
               <h3 className="text-center text-[24px] font-[510] text-[#171717]">
                 Trusted By
                 <br />
@@ -230,7 +243,9 @@ const Bento = () => {
               </div>
             </div>
 
-            <div className={`flex min-h-[256px] flex-col bg-secondary p-8 xl:h-full ${ROUND_CARD}`}>
+            <div
+              className={`flex min-h-[256px] flex-col bg-secondary p-8 xl:h-full ${ROUND_CARD}`}
+            >
               <div className="flex min-h-[78px] flex-1 flex-col gap-2 pb-[22px]">
                 <h3 className="text-[24px] leading-[30px] font-medium text-[#171717]">
                   Built to Scale
