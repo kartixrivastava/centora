@@ -124,7 +124,7 @@ const Footer = () => {
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-[32px] border border-white/20 px-4 py-20 text-center shadow-2xl md:py-28">
           {/* Blurred Background */}
           <Image
-            src="/Assests/Blurred.jpg"
+            src="/Assets/Blurred.jpg"
             alt="Blurred background"
             fill
             priority
