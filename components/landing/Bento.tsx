@@ -46,12 +46,12 @@ const META_TEXT = "text-[12px] leading-4 tracking-[1.2px] text-[#404040]";
 const Bento = () => {
   return (
     <section className="w-full bg-background px-4 pb-24 md:px-8 lg:px-10">
-      <div className="mx-auto flex w-full max-w-[1024px] flex-col gap-6 xl:flex-row xl:gap-4">
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 xl:flex-row xl:gap-4">
         <div
-          className={`flex w-full flex-col overflow-hidden bg-secondary px-8 pt-8 xl:h-[658px] xl:w-2/5 ${ROUND_CARD}`}
+          className={`flex w-full flex-col overflow-hidden bg-secondary px-8 pt-8 xl:h-164.5 xl:w-2/5 ${ROUND_CARD}`}
         >
           <div className="flex flex-col pb-6">
-            <h2 className="text-center text-[36px] font-medium leading-[45px] text-primary">
+            <h2 className="text-center text-[36px] font-medium leading-11.25 text-primary">
               Guided Onboarding
               <br />
               For Every Team
@@ -64,12 +64,12 @@ const Bento = () => {
           </div>
 
           <div className="flex flex-1 items-end justify-center">
-            <div className="relative h-[460px] w-[256px] rounded-t-[32px] border-x-[6px] border-t-[6px] border-[#262626] bg-[#F5F5F5]">
-              <div className="flex h-[454px] w-[244px] flex-col rounded-[50px] bg-[#F5F5F5] px-5 pb-[27.5px] pt-[72px]">
-                <h3 className="text-[30px] leading-[30px] font-medium tracking-[-0.75px] text-[#171717]">
+            <div className="relative h-115 w-[256px] rounded-t-[32px] border-x-[6px] border-t-[6px] border-[#262626] bg-[#F5F5F5]">
+              <div className="flex h-113.5 w-61 flex-col rounded-[50px] bg-[#F5F5F5] px-5 pb-[27.5px] pt-18">
+                <h3 className="text-[30px] leading-7.5 font-medium tracking-[-0.75px] text-[#171717]">
                   Your workspace
                 </h3>
-                <h3 className="mt-1 text-[30px] leading-[30px] font-medium tracking-[-0.75px] text-[#171717]">
+                <h3 className="mt-1 text-[30px] leading-7.5 font-medium tracking-[-0.75px] text-[#171717]">
                   is ready!
                 </h3>
                 <p className="pb-8 pt-4 text-sm leading-5 text-[#737373]">
@@ -78,7 +78,7 @@ const Bento = () => {
                   collaborating instantly.
                 </p>
 
-                <div className="relative mt-auto h-[208px] w-full overflow-hidden rounded-2xl bg-linear-to-br from-[#A8D946] via-[#A8D946]/80 to-[#A8D946]/50 p-4 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)]">
+                <div className="relative mt-auto h-52 w-full overflow-hidden rounded-2xl bg-linear-to-br from-[#A8D946] via-[#A8D946]/80 to-[#A8D946]/50 p-4 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),0_8px_10px_-6px_rgba(0,0,0,0.10)]">
                   <div className="absolute inset-0">
                     <svg
                       width="204"
@@ -137,12 +137,12 @@ const Bento = () => {
           </div>
         </div>
 
-        <div className="flex w-full flex-col gap-3 xl:h-[658px] xl:w-3/5">
+        <div className="flex w-full flex-col gap-3 xl:h-164.5 xl:w-3/5">
           <div
-            className={`relative min-h-[320px] overflow-hidden bg-[#E8F5C8] p-8 xl:h-[320px] ${ROUND_CARD}`}
+            className={`relative min-h-80 overflow-hidden bg-[#E8F5C8] p-8 xl:h-80 ${ROUND_CARD}`}
           >
-            <div className="max-w-[192px]">
-              <h2 className="text-[24px] leading-[30px] font-medium text-[#171717]">
+            <div className="max-w-48">
+              <h2 className="text-[24px] leading-7.5 font-medium text-[#171717]">
                 Real-time Data
               </h2>
               <p className="mt-3 text-sm leading-5 text-[#525252]">
@@ -159,25 +159,24 @@ const Bento = () => {
                   className={`pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border ${ringClass}`}
                 />
               ))}
-
-              <div className="relative h-[288px] w-[192px] overflow-hidden rounded-[24px] border-4 border-[#262626] bg-[#F5F5F5] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]">
+              <div className="relative h-72 w-48 overflow-hidden rounded-[24px] border-4 border-[#262626] bg-[#F5F5F5] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]">
                 <div className="absolute inset-0 bg-[#F5F5F5]" />
-                <div className="absolute left-3 right-3 top-9 rounded-[16777200px] border border-[#E5E5E5] bg-white px-[9px] py-[7px] text-[12px] leading-4 text-[#A1A1A1]">
+                <div className="absolute left-3 right-3 top-9 rounded-[16777200px] border border-[#E5E5E5] bg-white px-2.25 py-1.75 text-[12px] leading-4 text-[#A1A1A1]">
                   Search projects...
                 </div>
-                <div className="absolute left-3 top-[78px] text-[12px] leading-4 text-[#737373]">
+                <div className="absolute left-3 top-19.5 text-[12px] leading-4 text-[#737373]">
                   Active projects
                 </div>
                 <div className="absolute left-3 top-24 text-[28px] leading-7 font-medium text-[#171717]">
                   24 running
                 </div>
-                <div className="absolute left-3 top-[136px] flex items-start gap-[6px]">
+                <div className="absolute left-3 top-34 flex items-start gap-1.5">
                   {REALTIME_TABS.map((tab) => (
                     <div
                       key={tab.label}
                       className={
                         tab.active
-                          ? "rounded-[16777200px] bg-[#A8D946] px-[10px] py-1 text-[12px] leading-4 text-black"
+                          ? "rounded-[16777200px] bg-[#A8D946] px-2.5 py-1 text-[12px] leading-4 text-black"
                           : "px-2 py-1 text-[12px] leading-4 text-[#A1A1A1]"
                       }
                     >
@@ -197,7 +196,7 @@ const Bento = () => {
                   <span className="text-base font-medium text-white">
                     All passing
                   </span>
-                  <span className="rounded bg-[#A8D94633] px-2 py-[2px] text-[12px] leading-4 text-[#A8D946]">
+                  <span className="rounded bg-[#A8D94633] px-2 py-0.5 text-[12px] leading-4 text-[#A8D946]">
                     ✓ 100%
                   </span>
                 </div>
@@ -207,7 +206,7 @@ const Bento = () => {
 
           <div className="grid w-full gap-4 md:grid-cols-2 xl:flex-1 xl:grid-cols-2">
             <div
-              className={`flex min-h-[256px] flex-col items-center justify-center bg-[#E8F5C8] p-8 xl:h-full ${ROUND_CARD}`}
+              className={`flex min-h-64 flex-col items-center justify-center bg-[#E8F5C8] p-8 xl:h-full ${ROUND_CARD}`}
             >
               <h3 className="text-center text-[24px] font-[510] text-[#171717]">
                 Trusted By
@@ -244,10 +243,10 @@ const Bento = () => {
             </div>
 
             <div
-              className={`flex min-h-[256px] flex-col bg-secondary p-8 xl:h-full ${ROUND_CARD}`}
+              className={`flex min-h-64 flex-col bg-secondary p-8 xl:h-full ${ROUND_CARD}`}
             >
-              <div className="flex min-h-[78px] flex-1 flex-col gap-2 pb-[22px]">
-                <h3 className="text-[24px] leading-[30px] font-medium text-[#171717]">
+              <div className="flex min-h-19.5 flex-1 flex-col gap-2 pb-5.5">
+                <h3 className="text-[24px] leading-7.5 font-medium text-[#171717]">
                   Built to Scale
                 </h3>
                 <p className="text-sm leading-5 text-[#404040]">

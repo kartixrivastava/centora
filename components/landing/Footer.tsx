@@ -67,38 +67,38 @@ const Footer = () => {
   return (
     <footer className={footerWrapper}>
       {/* Green Section */}
-      <div className="flex flex-col items-start self-stretch rounded-t-[48px] bg-[#A8D946] px-[213px] pb-[64px] pt-[384px]">
-        <div className="flex max-w-[1024px] flex-col items-start gap-[88px] self-stretch px-[24px]">
+      <div className="flex flex-col items-start self-stretch rounded-t-[48px] bg-[#A8D946] px-53.25 pb-16 pt-96">
+        <div className="flex max-w-5xl flex-col items-start gap-22 self-stretch px-6">
           <div className="flex items-start gap-[532.8px] self-stretch">
             {/* Logo */}
             <Link
               href="#"
-              className="flex items-center gap-[8px]"
+              className="flex items-center gap-2"
               aria-label="Centora Home"
             >
-              <div className="flex h-[32px] w-[32px] rounded-full bg-[#171717] items-center justify-center">
+              <div className="flex h-8 w-8 rounded-full bg-[#171717] items-center justify-center">
                 <div className="h-3 w-3 rounded-full bg-white" />
               </div>
-              <span className="font-['SF_Pro'] text-[20px] font-[590] leading-[0px] text-[#171717]">
+              <span className="font-['SF_Pro'] text-[20px] font-[590] leading-0 text-[#171717]">
                 Centora
               </span>
             </Link>
 
             {/* Navigation */}
             <nav
-              className="flex items-start gap-[64px]"
+              className="flex items-start gap-16"
               aria-label="Footer Navigation"
             >
               {FOOTER_LINK_GROUPS.map((group) => (
                 <div
                   key={group.title}
-                  className={`flex flex-col items-start gap-[16px] self-stretch ${
+                  className={`flex flex-col items-start gap-4 self-stretch ${
                     group.minWidth ?? ""
                   }`}
                 >
                   <h2 className={headingClass}>{group.title}</h2>
 
-                  <ul className="flex flex-col items-start gap-[8px] self-stretch">
+                  <ul className="flex flex-col items-start gap-2 self-stretch">
                     {group.links.map((link) => (
                       <li key={link.label} className="self-stretch">
                         <Link href={link.href} className={linkClass}>
@@ -113,14 +113,14 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="self-stretch text-center font-['SF_Pro'] text-[13.6px] font-[400] leading-[20px] text-[rgba(23,23,23,0.50)]">
+          <p className="self-stretch text-center font-['SF_Pro'] text-[13.6px] font-normal leading-5 text-[rgba(23,23,23,0.50)]">
             © {currentYear} Circular. All rights reserved.
           </p>
         </div>
       </div>
 
       {/* CTA Floating Section */}
-      <div className="absolute bottom-95 left-1/2 w-full max-w-[1024px] -translate-x-1/2 px-6 md:px-8">
+      <div className="absolute bottom-95 left-1/2 w-full max-w-5xl -translate-x-1/2 px-6 md:px-8">
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-[32px] border border-white/20 px-4 py-20 text-center shadow-2xl md:py-28">
           {/* Blurred Background */}
           <Image

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="mx-auto w-full max-w-[1440px] px-6 pb-12 pt-24">
+      <div className="mx-auto w-full max-w-360 px-6 pb-12 pt-24">
         <div className="animate-fade-in-up relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 pb-24 pt-24">
           <div className="mb-6 inline-flex items-center gap-2 rounded-xl border border-black/10 bg-white px-4 py-1.5 shadow-sm">
             <span className="text-sm font-medium text-black">
@@ -46,7 +46,7 @@ export default function Hero() {
         </div>
 
         <div className="-mt-2 flex w-full justify-center px-2 md:px-4">
-          <div className="w-full max-w-[1022px] overflow-hidden  bg-transparent ">
+          <div className="w-full max-w-255.5 overflow-hidden  bg-transparent ">
             <Image
               src="/assets/hero.svg"
               alt="Dashboard preview"
@@ -59,7 +59,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-20 mx-auto flex w-full max-w-[1440px] flex-col items-center overflow-hidden px-6 pb-12 pt-6 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+      <div className="relative z-20 mx-auto flex w-full max-w-360 flex-col items-center overflow-hidden px-6 pb-12 pt-6 mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <div className="flex w-max animate-marquee items-center gap-16">
           {[
             "acmecorp.svg",

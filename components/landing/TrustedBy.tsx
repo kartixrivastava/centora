@@ -61,16 +61,16 @@ const logos = [
 
 const TrustedBy = () => {
   return (
-    <section className="flex w-[1470px] px-[223px] py-[128px] flex-col items-start border-t border-b border-[rgba(168,217,70,0.15)] bg-white">
-      <div className="h-[424.5px] max-w-[1024px] self-stretch">
+    <section className="flex w-367.5 px-55.75 py-32 flex-col items-start border-t border-b border-[rgba(168,217,70,0.15)] bg-white">
+      <div className="h-[424.5px] max-w-5xl self-stretch">
         <div className="flex flex-col items-start w-5xl">
-          <h1 className="text-[60px] leading-[75px] font-medium text-[#171717]">
+          <h1 className="text-[60px] leading-18.75 font-medium text-[#171717]">
             Trusted by teams worldwide
           </h1>
 
           {/* Team Members */}
-          <div className="flex w-[1024px] justify-center items-start gap-12">
-            <div className="flex h-[149.5px] pr-[100px] pl-1 items-center gap-6 flex-1">
+          <div className="flex w-5xl justify-center items-start gap-12">
+            <div className="flex h-[149.5px] pr-25 pl-1 items-center gap-6 flex-1">
               {teamMembers.map(({ name, img, highlight }) => (
                 <div
                   key={name}
@@ -78,7 +78,7 @@ const TrustedBy = () => {
                 >
                   <div className="opacity-60">
                     <div
-                      className={`flex w-[72px] h-[72px] justify-center items-center rounded-full ${
+                      className={`flex w-18 h-18 justify-center items-center rounded-full ${
                         highlight ? "bg-[#A8D946]" : ""
                       }`}
                     >

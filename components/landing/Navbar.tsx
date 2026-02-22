@@ -17,7 +17,7 @@ export default function Navbar() {
         <LeftWingCurve className="h-12.5 w-12.5 text-white" />
 
         {/* Central Content */}
-        <div className="bg-white text-black px-4 flex items-center justify-between h-[80px] w-[1024px] rounded-b-[32px] text-[14.4px] font-medium leading-5 tracking-wide">
+        <div className="bg-white text-black px-4 flex items-center justify-between h-20 w-5xl rounded-b-[32px] text-[14.4px] font-medium leading-5 tracking-wide">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 pl-4">
             <div className="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center border border-white/10">
