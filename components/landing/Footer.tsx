@@ -114,13 +114,13 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="self-stretch text-center font-['SF_Pro'] text-[13.6px] font-normal leading-5 text-[rgba(23,23,23,0.50)]">
-            © {currentYear} Circular. All rights reserved.
+            © 2026 Centora. All rights reserved.
           </p>
         </div>
       </div>
 
       {/* CTA Floating Section */}
-      <div className="absolute bottom-95 left-1/2 w-full max-w-5xl -translate-x-1/2 px-6 md:px-8">
+      <div className="absolute bottom-96 left-1/2 w-full max-w-5xl -translate-x-1/2 px-6 md:px-8">
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-[32px] border border-white/20 px-4 py-20 text-center shadow-2xl md:py-28">
           {/* Blurred Background */}
           <Image
