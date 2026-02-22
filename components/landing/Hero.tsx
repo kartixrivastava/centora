@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="-mt-2 flex w-full justify-center px-2 md:px-4">
           <div className="w-full max-w-255.5 overflow-hidden  bg-transparent ">
             <Image
-              src="/assets/hero.svg"
+              src="/Assets/hero.svg"
               alt="Dashboard preview"
               width={1022}
               height={575}
@@ -85,7 +85,7 @@ export default function Hero() {
           ].map((logo, index) => (
             <Image
               key={index}
-              src={`/assets/${logo}`}
+              src={`/Assets/${logo}`}
               alt={logo.replace(".svg", "")}
               width={100}
               height={100}

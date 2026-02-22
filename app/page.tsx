@@ -27,7 +27,7 @@ export default function Home() {
         <div
           className="relative w-full"
           style={{
-            backgroundImage: "url('/assets/Background.jpeg')",
+            backgroundImage: "url('/Assets/Background.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

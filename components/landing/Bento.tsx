@@ -11,10 +11,10 @@ type KpiRow = {
 };
 
 const AVATARS = [
-  { src: "/assets/img1.png", alt: "User avatar 1" },
-  { src: "/assets/img2.png", alt: "User avatar 2" },
-  { src: "/assets/img3.png", alt: "User avatar 3" },
-  { src: "/assets/img4.png", alt: "User avatar 4" },
+  { src: "/Assets/img1.png", alt: "User avatar 1" },
+  { src: "/Assets/img2.png", alt: "User avatar 2" },
+  { src: "/Assets/img3.png", alt: "User avatar 3" },
+  { src: "/Assets/img4.png", alt: "User avatar 4" },
 ] satisfies Avatar[];
 
 const KPI_ROWS = [

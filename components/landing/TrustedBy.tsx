@@ -3,22 +3,22 @@ import { CommandR, FocalPoint, AcmeCorp, Interlock } from "@/components/icons";
 const teamMembers = [
   {
     name: "Jennifer Walsh",
-    img: "/assets/JenniferWalsh.png",
+    img: "/Assets/JenniferWalsh.png",
     highlight: false,
   },
   {
     name: "Micheal Torres",
-    img: "/assets/MichealTorres.png",
+    img: "/Assets/MichealTorres.png",
     highlight: true,
   },
   {
     name: "Amanda Chen",
-    img: "/assets/AmandaChen.png",
+    img: "/Assets/AmandaChen.png",
     highlight: false,
   },
   {
     name: "David Patterson",
-    img: "/assets/DavidPatterson.png",
+    img: "/Assets/DavidPatterson.png",
     highlight: false,
   },
 ];
