@@ -1,8 +1,23 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight, Mail } from "lucide-react";
+
+/* ================= TYPES ================= */
+
+type FooterLink = {
+  label: string;
+  href: string;
+};
+
 type FooterLinkGroup = {
   title: string;
   minWidth?: string;
-  links: { label: string; href: string }[];
+  links: FooterLink[];
 };
+
+/* ================= DATA ================= */
 
 const FOOTER_LINK_GROUPS: FooterLinkGroup[] = [
   {
@@ -33,29 +48,41 @@ const FOOTER_LINK_GROUPS: FooterLinkGroup[] = [
   },
 ];
 
+/* ================= STYLES ================= */
+
+const footerWrapper =
+  "flex w-full flex-col items-center bg-[#F5F5F5] pt-[152px]";
+
 const headingClass =
   "flex flex-col items-start self-stretch text-[rgba(23,23,23,0.50)] font-['SF_Pro'] text-[12px] font-[510] leading-[16px] tracking-[0.6px] uppercase";
 
 const linkClass =
   "flex flex-col items-start self-stretch pt-[2.75px] pb-[1.25px] text-[#171717] font-['SF_Pro'] text-[13.7px] font-[400] leading-[20px]";
 
+/* ================= COMPONENT ================= */
+
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="flex w-full flex-col items-center bg-[#F5F5F5] pt-[152px]">
-      <div className="flex flex-col items-start self-stretch rounded-b-none rounded-tl-[48px] rounded-tr-[48px] bg-[#A8D946] px-[213px] pb-[64px] pt-[384px]">
-        <div className="flex max-w-[1024px] flex-col items-start gap-[88px] self-stretch px-[24px] py-[0px]">
+    <footer className={footerWrapper}>
+      {/* Green Section */}
+      <div className="flex flex-col items-start self-stretch rounded-t-[48px] bg-[#A8D946] px-[213px] pb-[64px] pt-[384px]">
+        <div className="flex max-w-[1024px] flex-col items-start gap-[88px] self-stretch px-[24px]">
           <div className="flex items-start gap-[532.8px] self-stretch">
             {/* Logo */}
-            <a
+            <Link
               href="#"
               className="flex items-center gap-[8px]"
               aria-label="Centora Home"
             >
-              <div className="h-[32px] w-[32px] rounded-[16777200px] bg-[#171717]" />
-              <span className="flex flex-col items-start font-['SF_Pro'] text-[20px] font-[590] leading-[0px] text-[#171717]">
+              <div className="flex h-[32px] w-[32px] rounded-full bg-[#171717] items-center justify-center">
+                <div className="h-3 w-3 rounded-full bg-white" />
+              </div>
+              <span className="font-['SF_Pro'] text-[20px] font-[590] leading-[0px] text-[#171717]">
                 Centora
               </span>
-            </a>
+            </Link>
 
             {/* Navigation */}
             <nav
@@ -74,9 +101,9 @@ const Footer = () => {
                   <ul className="flex flex-col items-start gap-[8px] self-stretch">
                     {group.links.map((link) => (
                       <li key={link.label} className="self-stretch">
-                        <a href={link.href} className={linkClass}>
+                        <Link href={link.href} className={linkClass}>
                           {link.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -86,19 +113,48 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="flex flex-col items-center self-stretch text-center font-['SF_Pro'] text-[13.6px] font-[400] leading-[20px] text-[rgba(23,23,23,0.50)]">
-            © 2026 Circular. All rights reserved.
+          <p className="self-stretch text-center font-['SF_Pro'] text-[13.6px] font-[400] leading-[20px] text-[rgba(23,23,23,0.50)]">
+            © {currentYear} Circular. All rights reserved.
           </p>
         </div>
       </div>
 
-      <div className="absolute left-[380px] flex w-[1024px] bottom-[780px] flex-col items-start">
-        <div className="flex flex-col items-start self-stretch rounded-[24px] bg-[rgba(255,255,255,0)] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)]">
-          <img
+      {/* CTA Floating Section */}
+      <div className="absolute bottom-95 left-1/2 w-full max-w-[1024px] -translate-x-1/2 px-6 md:px-8">
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-[32px] border border-white/20 px-4 py-20 text-center shadow-2xl md:py-28">
+          {/* Blurred Background */}
+          <Image
             src="/Assests/Blurred.jpg"
-            alt=""
-            className="absolute left-[-128px]  top-[-52.5px] w-[1280px] h-[450px]  rounded-2xl"
+            alt="Blurred background"
+            fill
+            priority
+            className="object-cover blur-sm"
           />
+
+          {/* Content */}
+          <h1 className="relative z-10 mb-10 text-4xl font-semibold leading-[1.1] tracking-wider text-primary md:text-5xl lg:text-[56px]">
+            Start building something
+            <br />
+            truly amazing today
+          </h1>
+
+          <div className="relative z-10 flex w-full max-w-md items-center rounded-full border border-white/50 bg-white/90 p-1.5 shadow-lg backdrop-blur-sm">
+            <div className="pl-4 pr-2 text-gray-500">
+              <Mail className="h-5 w-5" />
+            </div>
+
+            <input
+              type="email"
+              aria-label="Email address"
+              placeholder="Enter your email"
+              className="min-w-0 flex-1 bg-transparent text-sm text-gray-900 outline-none placeholder:text-gray-500 md:text-base"
+            />
+
+            <button className="flex shrink-0 items-center gap-2 rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white transition-colors hover:cursor-pointer md:px-6 md:py-3">
+              Join Waitlist
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
         </div>
       </div>
     </footer>
