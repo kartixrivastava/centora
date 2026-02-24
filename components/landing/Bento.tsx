@@ -31,9 +31,9 @@ const REALTIME_TABS = [
 ] as const;
 
 const RINGS = [
-  "h-[352px] w-[352px] border-[rgba(168,217,70,0.40)]",
-  "h-[288px] w-[288px] border-[rgba(168,217,70,0.60)]",
-  "h-[224px] w-[224px] border-[rgba(168,217,70,0.80)]",
+  "h-[352px] w-[352px] max-w-[90vw] max-h-[90vw] border-[rgba(168,217,70,0.40)]",
+  "h-[288px] w-[288px] max-w-[70vw] max-h-[70vw] border-[rgba(168,217,70,0.60)]",
+  "h-[224px] w-[224px] max-w-[50vw] max-h-[50vw] border-[rgba(168,217,70,0.80)]",
 ] as const;
 
 const ROUND_CARD = "rounded-[32px]";
@@ -63,8 +63,8 @@ const Bento = () => {
             </p>
           </div>
 
-          <div className="flex flex-1 items-end justify-center">
-            <div className="relative h-115 w-[256px] rounded-t-[32px] border-x-[6px] border-t-[6px] border-[#262626] bg-[#F5F5F5]">
+          <div className="flex flex-1 items-end justify-center w-full">
+            <div className="relative h-115 w-[256px] max-w-full rounded-t-[32px] border-x-[6px] border-t-[6px] border-[#262626] bg-[#F5F5F5] mx-auto">
               <div className="flex h-113.5 w-61 flex-col rounded-[50px] bg-[#F5F5F5] px-5 pb-[27.5px] pt-18">
                 <h3 className="text-[30px] leading-7.5 font-medium tracking-[-0.75px] text-[#171717]">
                   Your workspace
@@ -218,9 +218,8 @@ const Bento = () => {
                 {AVATARS.map((avatar, index) => (
                   <div
                     key={avatar.src}
-                    className={`relative h-12 w-12 overflow-hidden rounded-full border-2 border-white/25 ${
-                      index === 0 ? "" : "-ml-3"
-                    }`}
+                    className={`relative h-12 w-12 overflow-hidden rounded-full border-2 border-white/25 ${index === 0 ? "" : "-ml-3"
+                      }`}
                   >
                     <Image
                       src={avatar.src}

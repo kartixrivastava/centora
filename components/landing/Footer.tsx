@@ -67,9 +67,9 @@ const Footer = () => {
   return (
     <footer className={footerWrapper}>
       {/* Green Section */}
-      <div className="flex flex-col items-start self-stretch rounded-t-[48px] bg-[#A8D946] px-53.25 pb-16 pt-96">
+      <div className="flex flex-col items-start self-stretch rounded-t-[48px] bg-[#A8D946] px-6 lg:px-53.25 pb-16 pt-96">
         <div className="flex max-w-5xl flex-col items-start gap-22 self-stretch px-6">
-          <div className="flex items-start gap-[532.8px] self-stretch">
+          <div className="flex justify-between items-start flex-wrap gap-10 md:gap-20 self-stretch">
             {/* Logo */}
             <Link
               href="#"
@@ -86,15 +86,14 @@ const Footer = () => {
 
             {/* Navigation */}
             <nav
-              className="flex items-start gap-16"
+              className="flex items-start flex-wrap gap-8 md:gap-16"
               aria-label="Footer Navigation"
             >
               {FOOTER_LINK_GROUPS.map((group) => (
                 <div
                   key={group.title}
-                  className={`flex flex-col items-start gap-4 self-stretch ${
-                    group.minWidth ?? ""
-                  }`}
+                  className={`flex flex-col items-start gap-4 self-stretch ${group.minWidth ?? ""
+                    }`}
                 >
                   <h2 className={headingClass}>{group.title}</h2>
 
